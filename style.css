@@ -1,0 +1,107 @@
+body {
+  background: #000;
+  color: #fff;
+  font-family: 'Arial Black', sans-serif;
+  text-align: center;
+  padding: 20px;
+}
+.container {
+  max-width: 700px;
+  margin: auto;
+}
+h1 {
+  font-size: 2.5em;
+  color: #ffcc00;
+  text-shadow: 0 0 10px #ffcc00;
+}
+.slot-machine {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin: 40px 0;
+}
+.slot {
+  flex: 1 1 30%;
+  min-width: 90px;
+  max-width: 150px;
+  background: #222;
+  border: 4px solid #ffcc00;
+  padding: 20px;
+  font-size: clamp(1.2em, 4vw, 1.6em);
+  border-radius: 10px;
+  box-shadow: 0 0 15px #ffcc00;
+  text-align: center;
+}
+button {
+  background-color: #ff0033;
+  border: none;
+  color: white;
+  padding: 15px 25px;
+  font-size: 1.2em;
+  border-radius: 10px;
+  cursor: pointer;
+  margin-top: 10px;
+  box-shadow: 0 0 10px #ff0033;
+}
+.result-panel {
+  margin-top: 30px;
+  padding: 25px;
+  font-size: 1.4em;
+  background-color: #8b0000;
+  border-radius: 20px;
+  color: #ffffcc;
+  text-shadow: 0 0 15px #ffff66;
+  animation: flash 1s infinite alternate;
+}
+@keyframes flash {
+  0% { box-shadow: 0 0 20px #f0f, 0 0 40px #f0f; }
+  100% { box-shadow: 0 0 20px #ff0, 0 0 50px #ff0; }
+}
+.results-table {
+  margin: 30px auto;
+  border-collapse: collapse;
+  width: 90%;
+  background: #111;
+}
+.results-table th, .results-table td {
+  border: 1px solid #444;
+  padding: 10px;
+}
+.status {
+  margin-top: 10px;
+  color: #aaa;
+}
+.modal {
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(0, 0, 0, 0.9);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 100;
+}
+.modal-content {
+  background: #1a1a1a;
+  padding: 30px;
+  border-radius: 12px;
+  text-align: center;
+  box-shadow: 0 0 20px #ffcc00;
+}
+input {
+  padding: 10px 15px;
+  font-size: 1.2em;
+  margin-top: 15px;
+  border-radius: 10px;
+  border: 2px solid #ffcc00;
+  background: #111;
+  color: white;
+  text-align: center;
+  box-shadow: 0 0 10px #ffcc00;
+  outline: none;
+}
+input:focus {
+  border-color: #ff0033;
+  box-shadow: 0 0 12px #ff0033;
+}
+.hidden { display: none; }

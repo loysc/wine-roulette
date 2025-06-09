@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Wine Roulette Vegas</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div id="nameModal" class="modal">
+      <div class="modal-content">
+        <h2>Bienvenue !</h2>
+        <p>Entre ton prénom pour tirer ta bouteille</p>
+        <input type="text" id="nameInput" placeholder="Ton prénom..." />
+        <button id="startBtn">Entrer</button>
+      </div>
+    </div>
+
+    <div id="resetModal" class="modal hidden">
+      <div class="modal-content" style="position: relative">
+        <button
+          id="closeResetModal"
+          style="
+            position: absolute;
+            top: 15px;
+            right: 20px;
+            background: none;
+            border: none;
+            color: #fff;
+            font-size: 2em;
+            cursor: pointer;
+          "
+        >
+          &times;
+        </button>
+        <h2>Réinitialiser les tirages</h2>
+        <p>Mot de passe requis :</p>
+        <input
+          type="password"
+          id="adminPassword"
+          placeholder="Mot de passe..."
+        />
+        <button id="confirmReset">Réinitialiser</button>
+        <p id="resetStatus"></p>
+      </div>
+    </div>
+
+    <div class="container hidden">
+      <h1>🎰 WINE ROULETTE</h1>
+      <div class="slot-machine">
+        <div class="slot" id="slot1">🎡</div>
+        <div class="slot" id="slot2">🎡</div>
+        <div class="slot" id="slot3">🎡</div>
+      </div>
+      <button id="spinBtn">Tirer ma bouteille</button>
+      <div id="result" class="result-panel hidden">🎉</div>
+      <p id="status" class="status"></p>
+      <table id="resultsTable" class="results-table">
+        <thead>
+          <tr>
+            <th>Prénom</th>
+            <th>Couleur</th>
+            <th>Région</th>
+            <th>Cépage</th>
+            <th>Date</th>
+          </tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+      <button id="resetBtn">Réinitialiser (admin)</button>
+    </div>
+
+    <div id="drunkModal" class="modal hidden">
+      <div
+        class="modal-content"
+        style="text-align: center; padding: 40px 30px 30px 30px"
+      >
+        <h2 style="font-size: 2.2em; margin-bottom: 10px">
+          🍷 Les 15 bouteilles ont déjà été attribuées&nbsp;!<br />
+          <span
+            style="
+              font-size: 1.1em;
+              font-weight: 400;
+              display: block;
+              margin-top: 10px;
+            "
+            >Sac à vin&nbsp;!</span
+          >
+        </h2>
+        <img
+          src="https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExMHhhZWZua2phYnJpc3ExeDMyeGFvZms4ejZwbWVxZGUzaWw4ZTVkYyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/ggHmCDJXx4om4hNWbM/giphy.gif"
+          alt="Ivrogne rigolo"
+          style="
+            max-width: 340px;
+            width: 100%;
+            border-radius: 18px;
+            margin: 30px auto 35px auto;
+            display: block;
+            box-shadow: 0 4px 24px #0003;
+          "
+        />
+        <button
+          onclick="document.getElementById('drunkModal').classList.add('hidden')"
+          style="
+            background: #ff1744;
+            color: #fff;
+            font-size: 1.3em;
+            font-weight: bold;
+            border: none;
+            border-radius: 12px;
+            padding: 16px 48px;
+            cursor: pointer;
+            box-shadow: 0 2px 12px #0002;
+            transition: background 0.2s, transform 0.2s;
+            margin: 0 auto;
+            display: block;
+          "
+          onmouseover="this.style.background='#d50032'; this.style.transform='scale(1.05)'"
+          onmouseout="this.style.background='#ff1744'; this.style.transform='scale(1)'"
+        >
+          Fermer
+        </button>
+      </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.5.1/dist/confetti.browser.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/fireworks-js@1.0.4/dist/fireworks.min.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
