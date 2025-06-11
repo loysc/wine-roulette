@@ -117,10 +117,19 @@ input:focus {
 }
 
 @media (max-width: 700px) {
+  #nameModal {
+    overflow-y: auto !important;
+    max-height: 100vh !important;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
   #nameModal .modal-content {
     flex-direction: column !important;
     gap: 24px !important;
-    padding: 24px 8px !important;
+    padding: 24px 8px 40px 8px !important;
+    max-height: 90vh !important;
+    overflow-y: auto !important;
   }
   #nameModal .modal-content img {
     width: 70vw !important;
