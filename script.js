@@ -59,7 +59,8 @@ async function fetchData() {
   });
 }
 
-startBtn.addEventListener("click", () => {
+startBtn.addEventListener("click", (e) => {
+  e.preventDefault();
   console.log("Bouton Entrer cliqué");
   const name = nameInput.value.trim();
   if (!name) return alert("Entre ton prénom !");
