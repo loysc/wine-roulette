@@ -1,7 +1,7 @@
 body {
   background: #000;
   color: #fff;
-  font-family: 'Arial Black', sans-serif;
+  font-family: "Arial Black", sans-serif;
   text-align: center;
   padding: 20px;
 }
@@ -55,8 +55,12 @@ button {
   animation: flash 1s infinite alternate;
 }
 @keyframes flash {
-  0% { box-shadow: 0 0 20px #f0f, 0 0 40px #f0f; }
-  100% { box-shadow: 0 0 20px #ff0, 0 0 50px #ff0; }
+  0% {
+    box-shadow: 0 0 20px #f0f, 0 0 40px #f0f;
+  }
+  100% {
+    box-shadow: 0 0 20px #ff0, 0 0 50px #ff0;
+  }
 }
 .results-table {
   margin: 30px auto;
@@ -64,7 +68,8 @@ button {
   width: 90%;
   background: #111;
 }
-.results-table th, .results-table td {
+.results-table th,
+.results-table td {
   border: 1px solid #444;
   padding: 10px;
 }
@@ -74,7 +79,10 @@ button {
 }
 .modal {
   position: fixed;
-  top: 0; left: 0; right: 0; bottom: 0;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
   background: rgba(0, 0, 0, 0.9);
   display: flex;
   justify-content: center;
@@ -104,4 +112,18 @@ input:focus {
   border-color: #ff0033;
   box-shadow: 0 0 12px #ff0033;
 }
-.hidden { display: none; }
+.hidden {
+  display: none;
+}
+
+@media (max-width: 700px) {
+  #nameModal .modal-content {
+    flex-direction: column !important;
+    gap: 24px !important;
+    padding: 24px 8px !important;
+  }
+  #nameModal .modal-content img {
+    width: 70vw !important;
+    margin-bottom: 12px;
+  }
+}
