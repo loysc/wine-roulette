@@ -138,8 +138,8 @@ spinBtn.addEventListener("click", async () => {
     result.innerHTML = "<br>⚠️ Erreur lors de la récupération des tirages";
     return;
   }
-  // Limite à 15 tirages
-  if (tirages.length >= 15) {
+  // Limite à 12 tirages
+  if (tirages.length >= 12) {
     drunkModal.classList.remove("hidden");
     spinBtn.disabled = false;
     return;
