@@ -60,6 +60,7 @@ async function fetchData() {
 }
 
 startBtn.addEventListener("click", () => {
+  console.log("Bouton Entrer cliqué");
   const name = nameInput.value.trim();
   if (!name) return alert("Entre ton prénom !");
   userName = name.toLowerCase();

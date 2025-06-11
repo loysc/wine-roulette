@@ -130,6 +130,7 @@ input:focus {
     padding: 24px 8px 40px 8px !important;
     max-height: 90vh !important;
     overflow-y: auto !important;
+    padding-bottom: 100px !important;
   }
   #nameModal .modal-content img {
     width: 70vw !important;
