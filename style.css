@@ -136,4 +136,11 @@ input:focus {
     width: 70vw !important;
     margin-bottom: 12px;
   }
+  #nameModal .modal-content input[type="text"],
+  #nameModal .modal-content button {
+    width: 100% !important;
+    max-width: none !important;
+    box-sizing: border-box;
+    margin-bottom: 10px;
+  }
 }
